@@ -1,0 +1,505 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-spacing: 0;
+}
+
+
+/* =======================Body================== */
+@font-face {
+    font-family: Roboto;
+    src: url('../fonts/Roboto-Light.woff') format('woff'),
+         url('../fonts/Roboto-Light.ttf') format('ttf');
+
+}
+@font-face {
+font-family: Proxima Nova light;
+src: url('../fonts/ProximaNova-Light.woff') format('woff'),
+     url('../fonts/ProximaNova-Light.ttf') format('ttf');
+    font-weight: 300;
+    }
+body{
+    font-size: 16px;
+    font-family:Roboto;
+}
+
+.page_header, .page_footer{
+    min-height: 67px;
+    width: 100%;
+    background-color: #f7c61d;
+    padding-top: 20px;
+    box-sizing: border-box;
+}
+
+.wrapper{
+    width:1170px;
+    height: 100%;
+    margin: 0 auto;
+    justify-content: space-around;
+}
+
+.page_header .wrapper, .page_footer .wrapper{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.page_header nav ul a{
+    text-decoration: none;
+    font-family: Proxima Nova light;
+    text-transform: uppercase;
+    color: black;
+    padding: 0 35px;
+}
+
+.toogle_line{
+    display: block;
+    width: 100%;
+    height: 6px;
+    background-color: black;
+    border-radius: 4px;
+    margin: 2px 0;
+}
+
+.nav_toogle{
+   width: 50px;
+   background: none;
+   border: none;
+   display: none;
+}
+
+
+/* ==================Footer================= */
+.page_footer{
+margin: 100px 0;
+
+}
+
+.copyright{
+    font-family: Proxima Nova light;
+    color: #a78613;
+    font-size: 13px;
+}
+.footer_nav a{
+    text-decoration: none;
+    padding: 0 18px;
+    font-family: Proxima Nova light;
+    color: black;
+    font-weight: 300;
+
+}
+
+.socials{
+    display: flex;
+}
+
+.socials a{
+    display:block;
+    width: 45px;
+    height: 45px;
+    background: white;
+    border-radius: 50%;
+    color: #f7c61d;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+
+
+
+
+
+
+/* ==================main================== */
+
+main{ width: 77%; }
+
+article{ display: flex;
+margin-bottom: 50px; }
+
+.article_left{    width: 30%;  }
+.article_left img{
+    border-radius: 3px;
+}
+
+.article_right{    
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+padding-left: 20px;
+justify-content: space-between; }
+
+article h3{
+    font-family: Proxima Nova light;
+    font-size: 30px;
+    font-weight: 300px ;
+}
+
+.meta{
+    font-family: Roboto;
+    font-weight: 300;
+    color: #999;
+    font-size: 13px;
+}
+
+.meta span::after{
+    display: inline-block;
+    content: "|";
+    color: #999;
+    font-size: 13px;
+}
+
+.meta span:last-child::after{
+    display: none;
+}
+
+.category, .comments{
+    color: #e3b002;
+}
+
+.description{
+    color: #555;
+    font-size: 16px;
+    font-family: Roboto;
+}
+.views::before{
+    content: "\f06e";
+    font-family: 'Font Awesome 5 Free';
+    font-size: 16px;
+    margin-right: 10px;
+}
+.comments::before{
+    content: "\f075";
+    font-family: 'Font Awesome 5 Free';
+    font-size: 16px;
+    color: #999;
+    margin-right: 10px;
+}
+
+.views::after{
+    content: "|";
+    margin: 0 10px;
+}
+.additional{
+    color: #999;
+    font-family: Roboto;
+    font-weight: 300;
+}
+
+img{  width: 100%;
+}
+
+.main>.wrapper{ display: flex; }
+
+aside{
+    width: 23%;
+}
+
+main h2{
+    font-family: Proxima Nova light;
+    font-weight: bold;
+    font-size: 24px;
+    margin: 40px 0 25px;
+}
+
+.description::after{
+    content: ">";
+    color: #e3b002;
+}
+
+.more{
+    width: 170px;
+    height:42px ;
+    background: transparent;
+    color: black;
+    font-family: Robot;
+    font-weight: 300;
+    font-size: 12px;
+    text-transform: uppercase;
+    border: 1px solid #e3b002;
+    border-radius: 5px;
+    outline: none;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
+
+.search{
+    padding-top: 78px;
+    /* padding-left: 30px; */
+    position: relative;
+    
+
+}
+
+.search label{
+    position: absolute;
+    left:1;
+    top: 1;
+}
+.search input{
+    width: 100%;
+    border-radius: 10px;
+    outline: none;
+    font-size: 14px;
+    border: 1px solid #e5e5e5;
+    box-sizing: border-box;
+    padding: 2px 30px;
+
+
+}
+.calender_widget{
+    border: 1px solid #e5e5e5;
+    margin-top: 38px;
+    border-radius: 15px;
+    /* box-sizing: border-box; */
+}
+
+.prev, .next{
+    color: #e5e5e5;
+}
+.calender_widget .calender_top{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 38px;
+    width: 100%;
+
+    
+}
+
+table{
+    width: 100%;
+}
+
+table th{
+    height: 26px;
+    background-color: #e7e7e7;
+    color: #888;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 4px;
+}
+
+table td{
+    height: 33px;
+    color: #888;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 6px;
+    border: 1px solid #e5e5e5;
+}
+
+.popular_news article{
+    flex-direction: column;
+}
+.popular_news{
+    margin-top: 20px;
+}
+
+.popular_news h3{
+    font-size: 18px;
+    font-family: Roboto;
+    font-weight: 500;
+    line-height: 1.1;
+    margin-top: 10px;
+}
+
+.popular_news h2{
+    font-family: Proxima Nova light;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+@media(max-width: 75em){
+
+    .page_header{
+        position: relative;
+    }
+    .nav_toogle{
+        display: block;
+        order: 1;
+    }
+
+    nav{
+        position: absolute;
+        top: 100%;
+    }
+
+    nav ul{
+        flex-direction: column;
+    }
+    .left_nav, .right_nav{
+        display:none;
+    }
+
+    .left_nav{
+        left: 15px;
+    }
+
+    .right_nav{
+        right: 15px;
+    }
+
+    .open .left_nav, .open .right_nav{
+        display: block;
+    }
+
+
+
+    .page_header .wrapper{
+        justify-content: space-between;
+    }
+    .wrapper{
+        width: 100%;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+
+    .main>.wrapper{
+        flex-direction: column;
+
+    }
+    main, aside{
+        width: 100%;
+    }
+
+    article{
+        flex-direction: column;
+        width: 50%;
+        /* padding-right: 15px; */
+    }
+
+    .articles{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .article_left{
+        width: 98%;
+        padding-bottom: 20px;
+    }
+
+    .article_right{
+        padding-left: 0;
+        width: 98%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .calender_widget{
+        width: 100%;
+    }
+
+    .popular_news{
+        width: 100%;
+    }
+
+    .page_footer>.wrapper> .copyright{
+        width: 100%;
+        order: 1;
+        padding: 20px 15px;
+        box-sizing: border-box;
+    }
+
+    .page_footer>.wrapper> .footer_nav{
+        width: 60%;
+        padding-top: 10px;
+    }
+
+    .page_footer>.wrapper>.socials{
+        width: 40%;
+        padding-top: 10px;
+    }
+
+    .page_footer .wrapper{
+        flex-wrap: wrap;
+    }
+    
+}
+
+@media(max-width: 36.125em ){
+ 
+    .nav_toogle{
+        display: block;
+        order: 1;
+    }
+    .left_nav, .right_nav{
+        display:none;
+    }
+
+    .page_header .wrapper{
+        justify-content: space-between;
+    }   
+
+main, aside{
+    width: 100%;
+}
+
+article{
+    flex-direction: column;
+    width: 100%;
+}
+
+.article_right{
+    width: 100%;
+}
+
+.page_footer>.wrapper> .footer_nav , 
+.page_footer>.wrapper>.socials{
+    width: 100%;
+    padding-top: 30px;
+}
+
+.footer_nav a{
+    padding-left: 0;
+}
+
+}
